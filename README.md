@@ -37,10 +37,10 @@ El siguiente fragmento muestra cómo se obtiene la tecla ingresada por el jugado
 ```asm
 pedirLetra:
     push {lr}		
-    mov r7, #3          @ syscall: read
-    mov r0, #0          @ stdin
-    ldr r1, =cadena     @ dirección donde guardar el input
-    mov r2, #2          @ longitud máxima
-    swi 0               @ interrupción
+    mov r7, #3          // syscall: read
+    mov r0, #0          
+    ldr r1, =cadena     
+    mov r2, #2          
+    swi 0               
     pop {lr}
     bx lr
